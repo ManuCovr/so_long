@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mde-maga <mtmpfb@gmail.com>                +#+  +:+       +#+        */
+/*   By: mde-maga <mde-maga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 11:40:54 by mde-maga          #+#    #+#             */
-/*   Updated: 2024/09/08 14:32:39 by mde-maga         ###   ########.fr       */
+/*   Updated: 2024/09/09 14:52:16 by mde-maga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int	close_wnd(t_mapper *game)
 	return (0);
 }
 
-int	main (int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	t_mapper	game;
 
@@ -34,7 +34,7 @@ int	main (int argc, char **argv)
 		error_syntax(2, &game);
 	make_map(&game);
 	game.mlx = mlx_init();
-	keep_window(&game);
+	img_input(&game);
 	game.wnd = mlx_new_window(game.mlx, \
 								sl_strlen(game.map[0]) * 64, \
 								game.h * 64, "Stray");

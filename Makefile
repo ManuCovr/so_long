@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mde-maga <mtmpfb@gmail.com>                +#+  +:+       +#+         #
+#    By: mde-maga <mde-maga@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/06 11:36:16 by mde-maga          #+#    #+#              #
-#    Updated: 2024/09/07 12:01:06 by mde-maga         ###   ########.fr        #
+#    Updated: 2024/09/10 11:43:02 by mde-maga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRC = main.c ft_utility.c ft_map_parser.c ft_map_init.c ft_error.c ft_flood.c \
 
 CC = @cc
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g -O3
 MLXFLAGS = -L. -lXext -L. -lX11
 
 LIBFT_PATH = ./libs/libft

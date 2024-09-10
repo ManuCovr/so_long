@@ -6,11 +6,11 @@
 /*   By: mde-maga <mde-maga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 17:34:04 by mde-maga          #+#    #+#             */
-/*   Updated: 2023/10/13 10:32:15 by mde-maga         ###   ########.fr       */
+/*   Updated: 2024/09/09 11:35:21 by mde-maga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_putnbr(int nbr)
 {

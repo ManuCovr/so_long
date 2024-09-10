@@ -6,11 +6,11 @@
 /*   By: mde-maga <mde-maga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 17:26:09 by mde-maga          #+#    #+#             */
-/*   Updated: 2023/10/12 17:26:17 by mde-maga         ###   ########.fr       */
+/*   Updated: 2024/09/09 11:35:21 by mde-maga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 static int	ft_num_len(unsigned	int num)
 {

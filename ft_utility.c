@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_utility.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mde-maga <mtmpfb@gmail.com>                +#+  +:+       +#+        */
+/*   By: mde-maga <mde-maga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 11:36:46 by mde-maga          #+#    #+#             */
-/*   Updated: 2024/09/08 09:37:46 by mde-maga         ###   ########.fr       */
+/*   Updated: 2024/09/10 11:29:57 by mde-maga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,14 +52,18 @@ void	put_me_in_coach(t_mapper *game, int i, int j)
 
 void	janitor(t_mapper *game)
 {
-	mlx_destroy_image(game->mlx, game->img.player);
-	mlx_destroy_image(game->mlx, game->img.floor);
-	mlx_destroy_image(game->mlx, game->img.hole);
-	mlx_destroy_image(game->mlx, game->img.wall);
-	mlx_destroy_image(game->mlx, game->img.hole);
-	mlx_destroy_image(game->mlx, game->img.coin);
-	free_map(game->map);
+	if (game->img.player)
+		mlx_destroy_image(game->mlx, game->img.player);
+	if (game->img.coin)
+		mlx_destroy_image(game->mlx, game->img.coin);
+	if (game->img.floor)
+		mlx_destroy_image(game->mlx, game->img.floor);
+	if (game->img.wall)
+		mlx_destroy_image(game->mlx, game->img.wall);
+	if (game->img.hole)
+		mlx_destroy_image(game->mlx, game->img.hole);
 	mlx_destroy_window(game->mlx, game->wnd);
 	mlx_destroy_display(game->mlx);
 	free(game->mlx);
+	free_map(game->map);
 }

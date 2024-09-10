@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_map_parser.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mde-maga <mtmpfb@gmail.com>                +#+  +:+       +#+        */
+/*   By: mde-maga <mde-maga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 11:36:05 by mde-maga          #+#    #+#             */
-/*   Updated: 2024/09/07 11:12:31 by mde-maga         ###   ########.fr       */
+/*   Updated: 2024/09/09 12:45:35 by mde-maga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static int	square_map(t_mapper *game)
 	return (1);
 }
 
-static int check_param(t_mapper *game)
+static int	check_param(t_mapper *game)
 {
 	static int	i;
 	int			j;

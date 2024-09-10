@@ -6,13 +6,13 @@
 /*   By: mde-maga <mde-maga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 11:47:46 by mde-maga          #+#    #+#             */
-/*   Updated: 2024/09/06 11:48:02 by mde-maga         ###   ########.fr       */
+/*   Updated: 2024/09/09 12:47:32 by mde-maga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-static	int count_lines (char *argv)
+static int	count_lines(char *argv)
 {
 	int		i;
 	int		fd;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mde-maga <mtmpfb@gmail.com>                +#+  +:+       +#+        */
+/*   By: mde-maga <mde-maga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 11:36:26 by mde-maga          #+#    #+#             */
-/*   Updated: 2024/09/08 14:53:47 by mde-maga         ###   ########.fr       */
+/*   Updated: 2024/09/10 11:09:46 by mde-maga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,11 @@ typedef struct s_graph
 	void	*coin;
 	void	*hole;
 	void	*close;
-	int		direct;
+	int		direction;
 	void	**t;
 	void	**c;
 	void	**r;
 }			t_graph;
-
 
 typedef struct s_mapper
 {
@@ -70,7 +69,7 @@ int				map_reader(t_mapper *game, char *argv);
 int				check_map(t_mapper *game);
 int				all_params(char c);
 size_t			sl_strlen(const char *s);
-void			keep_window(t_mapper *game);
+void			img_input(t_mapper *game);
 void			janitor(t_mapper *game);
 int				move_p(int cd, t_mapper *game);
 int				eng(t_mapper *game);
