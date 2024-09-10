@@ -6,7 +6,7 @@
 /*   By: mde-maga <mde-maga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 11:36:46 by mde-maga          #+#    #+#             */
-/*   Updated: 2024/09/10 11:29:57 by mde-maga         ###   ########.fr       */
+/*   Updated: 2024/09/10 13:02:42 by mde-maga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,9 @@ void	put_me_in_coach(t_mapper *game, int i, int j)
 
 void	janitor(t_mapper *game)
 {
+	char	*str;
+
+	str = ft_itoa(game->m);
 	if (game->img.player)
 		mlx_destroy_image(game->mlx, game->img.player);
 	if (game->img.coin)
@@ -62,8 +65,12 @@ void	janitor(t_mapper *game)
 		mlx_destroy_image(game->mlx, game->img.wall);
 	if (game->img.hole)
 		mlx_destroy_image(game->mlx, game->img.hole);
+	if (game->img.close && game->img.close != game->img.hole)
+		mlx_destroy_image(game->mlx, game->img.close);
 	mlx_destroy_window(game->mlx, game->wnd);
 	mlx_destroy_display(game->mlx);
 	free(game->mlx);
 	free_map(game->map);
+	ft_printf("Number of movements: %s\n", str);
+	free(str);
 }

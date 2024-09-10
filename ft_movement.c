@@ -6,7 +6,7 @@
 /*   By: mde-maga <mde-maga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 12:00:56 by mde-maga          #+#    #+#             */
-/*   Updated: 2024/09/10 11:38:57 by mde-maga         ###   ########.fr       */
+/*   Updated: 2024/09/10 13:03:34 by mde-maga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,8 +66,6 @@ int	move_p(int kp, t_mapper *game)
 	if (kp == 65307)
 	{
 		put_str("Bye Bye ;3!\n");
-		if (game->img.close && game->img.close != game->img.hole)
-			mlx_destroy_image(game->mlx, game->img.close);
 		janitor(game);
 		exit(0);
 	}
