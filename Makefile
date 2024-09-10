@@ -6,7 +6,7 @@
 #    By: mde-maga <mde-maga@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/06 11:36:16 by mde-maga          #+#    #+#              #
-#    Updated: 2024/09/10 12:57:14 by mde-maga         ###   ########.fr        #
+#    Updated: 2024/09/10 16:12:46 by mde-maga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -90,6 +90,7 @@ BIBlue='\033[1;94m'       # Blue
 BIPurple='\033[1;95m'     # Purple
 BICyan='\033[1;96m'       # Cyan
 BIWhite='\033[1;97m'      # White
+BILGreen='\033[1;38;2;147;196;125m'  # Bold Custom Color (#93c47d)
 
 # High Intensity backgrounds
 On_IBlack='\033[0;100m'   # Black
@@ -101,10 +102,10 @@ On_IPurple='\033[0;105m'  # Purple
 On_ICyan='\033[0;106m'    # Cyan
 On_IWhite='\033[0;107m'   # White
 
-MSG1 = @echo ${IGreen}"Compiled Successfully ✔︎"${Color_Off}
-MSG2 = @echo ${IYellow}"Cleaned Successfully ✔︎"${Color_Off}
-MSG3 = @echo ${ICyan}"Cleaned ${NAME} Successfully ✔︎"${Color_Off}
-HOWTO = @echo ${IRed}"To run the program do: ./${NAME} maps/[map]"${Color_Off}
+MSG1 = @echo ${BILGreen}"✔︎ Compiled successfully"${Color_Off}
+MSG2 = @echo ${BILGreen}"✔︎ Cleaned successfully"${Color_Off}
+MSG3 = @echo ${BILGreen}"✔︎ Cleaned ${NAME} executable successfully"${Color_Off}
+HOWTO = @echo ${BIGreen}"To run the program write:"${BIWhite}"./${NAME} maps/[map]"${Color_Off}
 
 all: $(NAME)
 
